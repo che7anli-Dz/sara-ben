@@ -4,21 +4,190 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sara Ben — خياطة وإبداعات يدوية</title>
+<meta name="description" content="فساتين وإبداعات يدوية — Sara Ben، معسكر. امسح الكود وتواصل معايا على فايسبوك.">
+<meta property="og:title" content="Sara Ben — خياطة وإبداعات يدوية">
+<meta property="og:description" content="فساتين وإبداعات يدوية — معسكر">
+<meta property="og:image" content="https://che7anli-dz.github.io/sara-ben/sara-ben-poster.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
-  body { margin: 0; background: #FBF6F0; font-family: sans-serif; text-align: center; }
-  img.poster { width: 100%; max-width: 700px; display: block; margin: 0 auto; }
-  .links { padding: 18px; }
-  .links a { display: inline-block; margin: 6px; padding: 12px 22px; border-radius: 999px;
-             text-decoration: none; font-weight: bold; }
-  .fb { background: #1877F2; color: #fff; }
-  .dl { background: #A67C2E; color: #fff; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Cairo', system-ui, sans-serif;
+    color: #3A2A2A;
+    background:
+      radial-gradient(circle at 50% 0%, #FFFDF8 0%, #FBF6F0 55%, #F5EAD9 100%);
+    background-color: #FBF6F0;
+    text-align: center;
+  }
+  body::before {
+    content: "";
+    position: fixed; inset: 0;
+    pointer-events: none;
+    background-image: radial-gradient(rgba(166,124,46,.10) 1.2px, transparent 1.3px);
+    background-size: 26px 26px;
+  }
+  .frame {
+    position: relative;
+    max-width: 960px;
+    margin: 18px auto;
+    padding: 34px 18px 26px;
+    border: 3px solid #A67C2E;
+    outline: 1px solid #C9A227;
+    outline-offset: 5px;
+    background: rgba(255,255,255,.35);
+  }
+  header h1 {
+    margin: 0;
+    font-size: 54px; font-weight: 900;
+    color: #9E2B3C;
+    letter-spacing: 1px;
+    line-height: 1.1;
+  }
+  header .sub {
+    margin: 6px 0 0;
+    font-size: 22px; font-weight: 700;
+    color: #A67C2E;
+  }
+  .divider { margin: 16px auto 4px; color: #A67C2E; font-size: 15px; }
+  .divider::before, .divider::after {
+    content: "";
+    display: inline-block;
+    width: 90px; height: 2px;
+    background: #A67C2E;
+    vertical-align: middle;
+    margin: 0 10px;
+  }
+  section h2 {
+    margin: 30px 0 16px;
+    font-size: 24px; font-weight: 900;
+    color: #9E2B3C;
+  }
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+  .card {
+    width: calc(33.333% - 11px);
+    min-width: 200px;
+    max-width: 300px;
+    margin: 0;
+    padding: 14px 10px 12px;
+    background: #FFFDF8;
+    border: 1px solid #D9BE7A;
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(90,60,30,.10);
+  }
+  .card .ph {
+    height: 300px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .card .ph img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 12px rgba(60,40,40,.20));
+  }
+  .card figcaption {
+    margin-top: 10px;
+    font-size: 16px; font-weight: 700;
+    color: #3A2A2A;
+  }
+  .qr-card {
+    max-width: 420px;
+    margin: 34px auto 0;
+    padding: 22px 18px;
+    background: #FFFFFF;
+    border: 2px solid #C9A227;
+    border-radius: 22px;
+    box-shadow: 0 8px 22px rgba(90,60,30,.12);
+  }
+  .qr-card img { width: 210px; height: 210px; }
+  .qr-card .t1 { margin: 10px 0 0; font-size: 20px; font-weight: 900; }
+  .qr-card .t2 { margin: 2px 0 14px; font-size: 16px; color: #7A5A5A; }
+  .fb {
+    display: inline-block;
+    padding: 12px 26px;
+    border-radius: 999px;
+    background: #1877F2; color: #fff;
+    font-weight: 700; font-size: 17px;
+    text-decoration: none;
+  }
+  footer { margin-top: 30px; font-size: 15px; color: #7A5A5A; }
+  footer .print {
+    display: inline-block; margin-top: 8px;
+    font-size: 14px; color: #A67C2E;
+  }
+  @media (max-width: 640px) {
+    .frame { margin: 10px; padding: 26px 12px 20px; }
+    header h1 { font-size: 42px; }
+    header .sub { font-size: 19px; }
+    .card { width: calc(50% - 8px); min-width: 0; }
+    .card .ph { height: 230px; }
+  }
 </style>
 </head>
 <body>
-  <img class="poster" src="sara-ben-poster.png" alt="Sara Ben — خياطة وإبداعات يدوية">
-  <div class="links">
+<div class="frame">
+  <header>
+    <h1>Sara Ben</h1>
+    <p class="sub">خياطة وإبداعات يدوية</p>
+    <div class="divider">◆</div>
+  </header>
+
+  <section>
+    <h2>فساتيني</h2>
+    <div class="grid">
+      <figure class="card">
+        <div class="ph"><img src="img/dress-pink.png" alt="فستان وردي"></div>
+        <figcaption>فستان وردي</figcaption>
+      </figure>
+      <figure class="card">
+        <div class="ph"><img src="img/dress-brown.png" alt="فستان بني"></div>
+        <figcaption>فستان بني</figcaption>
+      </figure>
+      <figure class="card">
+        <div class="ph"><img src="img/dress-floral.png" alt="فستان مزهر"></div>
+        <figcaption>فستان مزهر</figcaption>
+      </figure>
+      <figure class="card">
+        <div class="ph"><img src="img/dress-blue.png" alt="فستان أزرق"></div>
+        <figcaption>فستان أزرق</figcaption>
+      </figure>
+      <figure class="card">
+        <div class="ph"><img src="img/dress-red.png" alt="فستان أحمر مخملي"></div>
+        <figcaption>فستان أحمر مخملي</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <h2>تفاصيل</h2>
+    <div class="grid">
+      <figure class="card">
+        <div class="ph"><img src="img/detail-bow.png" alt="وردة زرقاء"></div>
+        <figcaption>وردة زرقاء</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="qr-card">
+    <img src="img/qr.png" alt="امسح الكود">
+    <p class="t1">امسح الكود</p>
+    <p class="t2">وتواصل معايا على فايسبوك</p>
     <a class="fb" href="https://www.facebook.com/profile.php?id=61575168307965">تواصل معايا على فايسبوك</a>
-    <a class="dl" href="sara-ben-poster.png" download="sara-ben-poster.png">حمّل الملصق</a>
-  </div>
+  </section>
+
+  <footer>
+    معسكر &nbsp;•&nbsp; مرحباً بكم
+    <br><a class="print" href="sara-ben-poster.png" download="sara-ben-poster.png">حمّل الملصق للطباعة</a>
+  </footer>
+</div>
 </body>
 </html>
